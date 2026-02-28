@@ -540,6 +540,11 @@ ul {
 
 /* Blog page */
 
+.blog-grid{
+    overflow-x: hidden !important;
+    
+}
+
 .blog-title {
     color: white;
     text-align: center;
@@ -553,12 +558,6 @@ ul {
 .add-blog:hover {
     background-color: #129bd6;
     color: white;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
 }
 
 .blog-card {
@@ -685,5 +684,6 @@ ul {
     color: white;
 
 }
+
 
 
