@@ -10,7 +10,7 @@
 body {
     font-family: cairo;
     background-color: #1f2a37;
-
+    overflow-x: hidden !important;
 }
 
 a {
@@ -684,3 +684,4 @@ ul {
     color: white;
 
 }
+
