@@ -65,7 +65,7 @@ ul {
     overflow: hidden;
     overflow-y: scroll;
     top: 45px;
-    z-index: 1000 !important;
+    z-index: 2000 !important;
 
 }
 
@@ -190,7 +190,7 @@ ul {
 }
 
 .stat {
-
+    overflow-x: hidden !important;
     background: linear-gradient(135deg,
             #2c3e50 0%,
             #223140 100%);
@@ -231,6 +231,7 @@ ul {
 
 .card-chart {
     background: var(--main-color);
+    overflow-x: hidden !important;
 }
 
 .card-chart p {
@@ -684,4 +685,5 @@ ul {
     color: white;
 
 }
+
 
