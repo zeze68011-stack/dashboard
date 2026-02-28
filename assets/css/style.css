@@ -65,6 +65,7 @@ ul {
     overflow: hidden;
     overflow-y: scroll;
     top: 45px;
+    z-index: 1000 !important;
 
 }
 
@@ -681,4 +682,5 @@ ul {
 .draft-btn:hover {
     background: #454545;
     color: white;
+
 }
