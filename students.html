@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>students</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/private.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("loader").style.display = "none";
+            }, 500);
+
+        };
+    </script>
+</head>
+
+<body>
+
+    <div id="loader">
+        <img width="50" src="assets/images/loading.gif" alt="">
+    </div>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+
+
+     <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">لوحة تحكم المنصة</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-bars" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="ابحث هنا">
+                    </form>
+                </div>
+
+
+
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons d-flex gap-3">
+                        <a href=""><i class="fa-regular fa-comment"></i></a>
+
+                        <div class="messages-container position-relative" id="messages-container">
+
+                            <i class="fa-regular fa-envelope"></i>
+                            <ul class="messages-area  position-absolute text-center" id="messages-area">
+                                <div class="messages-header">
+                                    <h3>
+                                        أحدث الرسائل
+                                    </h3>
+                                </div>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/avatar1.jpeg" alt="">
+                                        <h4>سالم الاحمد</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/avatar3.avif" alt="">
+                                        <h4>سارة مصطفى</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/avatar2.jpg" alt="">
+                                        <h4>احمد محمد </h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/logo.jpg" alt="">
+                                        <h4>مايا أحمد</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+
+                                
+                                
+                               
+                               
+                               
+                                
+
+                                <a href="">كافة الرسائل</a>
+
+                            </ul>
+
+                        </div>
+
+
+
+                        <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                        <a href=""><i class="fa-regular fa-user"></i></a>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/logo.jpg" alt="">
+                    </div>
+                    <a data-bs-toggle="offcanvas" href="#users-online"><i
+                            class="fa-solid fa-bars-staggered users-canvas"></i></a>
+                </div>
+            </header>
+        </nav>
+
+        <div class="sidebar fixed-top" id="sidebar">
+            <div class="profile">
+                <img src="assets/images/logo.jpg" alt="">
+                <h3> مدير المنصة</h3>
+            </div>
+            <ul class="sidebar-ul">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="index.html" class="m-r-5">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-layer-group fs-5"></i>
+                    <a href="courses.html" class="m-r-5">  الدورات</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-box fs-5"></i>
+                    <a href="" class="m-r-5"> الطلاب</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-shopping-cart fs-5"></i>
+                    <a href="" class="m-r-5"> المدرسون</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-user fs-5"></i>
+                    <a href="students.html" class="m-r-5"> الاشتراكات </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <a href="" class="m-r-5">التقارير </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-gift"></i>
+                    <a href="" class="m-r-5">الشهادات </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-user fs-5"></i>
+                    <a href="blog.html" class="m-r-5">المدونة </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-gear fs-5"></i>
+                    <a href="" class="m-r-5">الإعدادات </a>
+                </li>
+               
+
+
+            </ul>
+        </div>
+
+
+
+        <div class="content" id="content">
+            <div class="inner-content p-1">
+                <div class="container-fluid">
+                    <h3 class="students-title">إدارة الطلاب</h3>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary my-2 add-student" data-bs-toggle="modal"
+                        data-bs-target="#add-student">
+                        إضافة طالب 
+                    </button>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3">
+                                <table id="example" class="table table-striped table-hover disblay">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">اسم الطالب</th>
+                                            <th scope="col">الهاتف</th>
+                                            <th scope="col">البريد</th>
+                                            <th scope="col">الحالة</th>
+                                            <th scope="col">الصورة</th>
+                                            <th scope="col">العمليات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="mb-3">
+                                            <th scope="row">1</th>
+                                            <td>محمد أحمد</td>
+                                            <td>0935678543</td>
+                                            <td>mohammad23@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;" class="spinner-grow text-danger"
+                                                    role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                 موقوف
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/avatar1.jpeg"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" type="button"
+                                                                data-bs-toggle="modal" href="#delete-student">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#edit-student">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="mb-3">
+                                            <th scope="row">2</th>
+                                            <td>سارة مصطفى </td>
+                                            <td>0935699540</td>
+                                            <td>sara44@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/avatar3.avif"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#delete-student" class="dropdown-item" type="button" data-bs-toggle="modal">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a href="#edit-student" class="dropdown-item" type="button" data-bs-toggle="modal">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="mb-3">
+                                            <th scope="row">3</th>
+                                            <td>سالم الاحمد</td>
+                                            <td>0935678543</td>
+                                            <td>salem@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;" class="spinner-grow text-danger"
+                                                    role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                 موقوف
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/avatar2.jpg"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#delete-student" class="dropdown-item" type="button" data-bs-toggle="modal">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a href="#edit-student" class="dropdown-item" type="button" data-bs-toggle="modal">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="mb-3">
+                                            <th scope="row">4</th>
+                                            <td> عمر خالد</td>
+                                            <td>0933365293</td>
+                                            <td>omar55@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/avatar4.avif"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#delete-student" class="dropdown-item" type="button" data-bs-toggle="modal">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a href="#edit-student" class="dropdown-item" type="button" data-bs-toggle="modal">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="mb-3">
+                                            <th scope="row">5</th>
+                                            <td> ياسمين محمود</td>
+                                            <td>0935678543</td>
+                                            <td>yasmeen@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/avatar7.jpg"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#delete-student" class="dropdown-item" type="button" data-bs-toggle="modal">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a href="#edit-student" class="dropdown-item" type="button" data-bs-toggle="modal">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="mb-3">
+                                            <th scope="row">6</th>
+                                            <td>مايا أحمد</td>
+                                            <td>0932233663</td>
+                                            <td>maya987@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/logo.jpg"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#delete-student" class="dropdown-item" type="button" data-bs-toggle="modal">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a href="#edit-sudent" class="dropdown-item" type="button" data-bs-toggle="modal">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="mb-3">
+                                            <th scope="row">7</th>
+                                            <td> إياد حسن</td>
+                                            <td>0995676663</td>
+                                            <td>eyad987@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/avatar5.webp"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#delete-student" class="dropdown-item" type="button" data-bs-toggle="modal">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a href="#edit-student" class="dropdown-item" type="button" data-bs-toggle="modal">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="mb-3">
+                                            <th scope="row">8</th>
+                                            <td> محمود طارق</td>
+                                            <td>0926478670</td>
+                                            <td>mahmood23@gmail.com</td>
+                                            <td>
+                                                <div style="width: 10px; height: 10px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td><img class="rounded-circle" width="50" height="50" src="assets/images/avatar6.jpg"
+                                                    alt=""></td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle dropdown-students" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#delete-student" class="dropdown-item" type="button" data-bs-toggle="modal">حذف
+                                                                الطالب</a>
+                                                        </li>
+                                                        <li><a href="#edit-student" class="dropdown-item" type="button" data-bs-toggle="modal">تعديل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">التفاصيل
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">إضافة فاتورة
+                                                            </a></li>
+                                                        <li><a class="dropdown-item" type="button">شهادة
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- start add student (modal) -->
+
+    <div class="modal fade " id="add-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content add-student-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title  fs-5" id="exampleModalLabel">إضافة طالب </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label">اسم الطالب</label>
+                                <input type="text" class="form-control" placeholder="الرجاء إدخال اسم الطالب">
+
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" placeholder="الرجاء إدخال البريد الإلكتروني">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الهاتف</label>
+                                <input type="text" class="form-control" placeholder="الرجاء إدخال رقم الهاتف">
+
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الطالب</label>
+                                <input type="text" class="form-control">
+
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"> التفاصيل</label>
+                            <textarea class="form-control" name="" id=""></textarea>
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="formFile" class="form-label">تحميل صورة الطالب</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <div class="modal-footer">
+                             <button type="button" class="btn add-student-modal-btn">حفظ بيانات الطالب</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end add student (modal) -->
+
+
+
+
+
+    <!-- start edit student (modal) -->
+
+    <div class="modal fade" id="edit-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content edit-student-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">تعديل بيانات الطالب</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label">اسم الطالب</label>
+                                <input type="text" class="form-control" placeholder="الرجاء إدخال اسم الطالب"
+                                    value="محمد أحمد">
+
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" placeholder="   mohammad23@gmail.com">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الهاتف</label>
+                                <input type="text" class="form-control" placeholder="0935678543   ">
+
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الطالب</label>
+                                <input type="text" class="form-control" value="1">
+
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"> التفاصيل</label>
+                            <textarea class="form-control" name="" id=""></textarea>
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="formFile" class="form-label">تحميل صورة الطالب</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                             <button type="button" class="btn edit-student-btn">حفظ بيانات الطالب</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end edit student (modal) -->
+
+
+
+
+    <!-- start delete student (modal) -->
+
+    <div class="modal fade" id="delete-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content delete-student-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">حذف بيانات الطالب</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+
+                    <form>
+
+
+                        <div class="alert alert-light">
+                            هل أنت متأكد من حذف الطالب
+                        </div>
+
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn delete-student-btn">حذف بيانات الطالب</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">إغلاق</button>
+                            
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end delete student (modal) -->
+
+
+
+
+     <!-- users online list (off canvas) -->
+
+
+
+    <div class="offcanvas offcanvas-end offcanvas-online" tabindex="-1" id="users-online" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين المتصلين</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/logo.jpg" alt="">
+                    <h4>مايا أحمد</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/avatar1.jpeg" alt="">
+                    <h4>سالم الاحمد </h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/avatar2.jpg" alt="">
+                    <h4>احمد محمد</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/avatar3.avif" alt="">
+                    <h4>سارة مصطفى</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" src="assets/images/avatar4.avif" alt="">
+                    <h4>مازن الزاهر</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="assets/js/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script>
+
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

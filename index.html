@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/private.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("loader").style.display = "none";
+            }, 500);
+
+        };
+    </script>
+</head>
+
+<body>
+    <div id="loader">
+        <img width="50" src="assets/images/loading.gif" alt="">
+    </div>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+
+
+
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">لوحة تحكم المنصة</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-bars" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="ابحث هنا">
+                    </form>
+                </div>
+
+
+
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div class="icons d-flex gap-3">
+                        <a href=""><i class="fa-regular fa-comment"></i></a>
+
+                        <div class="messages-container position-relative" id="messages-container">
+
+                            <i class="fa-regular fa-envelope"></i>
+                            <ul class="messages-area  position-absolute text-center" id="messages-area">
+                                <div class="messages-header">
+                                    <h3>
+                                        أحدث الرسائل
+                                    </h3>
+                                </div>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/avatar1.jpeg" alt="">
+                                        <h4>سالم الاحمد</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/avatar3.avif" alt="">
+                                        <h4>سارة مصطفى</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/avatar2.jpg" alt="">
+                                        <h4>احمد محمد </h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <div class="item-menu-right d-flex gap-2">
+                                        <img width="40" height="40" src="assets/images/logo.jpg" alt="">
+                                        <h4>مايا أحمد</h4>
+                                    </div>
+                                    <i class="fa-regular fa-comment"></i>
+                                </li>
+
+                                
+                                
+                               
+                               
+                               
+                                
+
+                                <a href="">كافة الرسائل</a>
+
+                            </ul>
+
+                        </div>
+
+
+
+                        <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                        <a href=""><i class="fa-regular fa-user"></i></a>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/logo.jpg" alt="">
+                    </div>
+                    <a data-bs-toggle="offcanvas" href="#users-online"><i
+                            class="fa-solid fa-bars-staggered users-canvas"></i></a>
+                </div>
+            </header>
+        </nav>
+
+        <div class="sidebar fixed-top" id="sidebar">
+            <div class="profile">
+                <img src="assets/images/logo.jpg" alt="">
+                <h3> مدير المنصة</h3>
+            </div>
+            <ul class="sidebar-ul">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="/" class="m-r-5">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-layer-group fs-5"></i>
+                    <a href="courses.html" class="m-r-5">  الدورات</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-box fs-5"></i>
+                    <a href="students.html" class="m-r-5"> الطلاب</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-shopping-cart fs-5"></i>
+                    <a href="" class="m-r-5"> المدرسون</a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-user fs-5"></i>
+                    <a href="" class="m-r-5"> الاشتراكات </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <a href="" class="m-r-5">التقارير </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-gift"></i>
+                    <a href="" class="m-r-5">الشهادات </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-user fs-5"></i>
+                    <a href="blog.html" class="m-r-5">المدونة </a>
+                </li>
+                <li class="mb-2 ">
+                    <i class="fa-solid fa-gear fs-5"></i>
+                    <a href="" class="m-r-5">الإعدادات </a>
+                </li>
+               
+
+
+            </ul>
+        </div>
+
+
+        <div class="content" id="content">
+            <div class="inner-content p-3">
+                <div class="container-fluid">
+                    <div class="row gap-2 flex-wrap flex-md-nowrap">
+                        <div
+                            class="col-md-3 stat  d-flex justify-content-between align-items-center flex-shrink-1">
+                            <div>
+                                <h3> طلاب جدد </h3>
+                                <h4>120 طالب</h4>
+                                <p class="text-white">يتم تحديث العدد بشكل مستمر</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-user fs-3"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-3 stat d-flex justify-content-between align-items-center flex-shrink-1">
+                            <div>
+                                <h3> الدورات المتاحة </h3>
+                                <h4>42 دورة</h4>
+                                <p class="text-white">يتم تحديث العدد بشكل مستمر</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-box fs-3"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-3 stat  d-flex justify-content-between align-items-center flex-shrink-1">
+                            <div>
+                                <h3> التسجيلات اليوم</h3>
+                                <h4>85 تسجيل</h4>
+                                <p class="text-white">يتم تحديث العدد بشكل مستمر</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-shopping-cart fs-3"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-3 stat  d-flex justify-content-between align-items-center flex-shrink-1">
+                            <div>
+                                <h3> إجمالي الاشتراكات</h3>
+                                <h4> +3200 طالب</h4>
+                                <p class="text-white">يتم تحديث العدد بشكل مستمر</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-dollar-sign fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col col-md-6 p-r-0 p-l-0 p-md-3 mb-3">
+                            <div class="card card-chart">
+                                <p class="text-center mt-2">أداء الدورات حسب التخصص </p>
+                                <div id="chart"></div>
+                            </div>
+                        </div>
+                        <div class="col col-md-6 p-l-0 p-r-0 p-md-3  ">
+                            <div class="card card-chart ">
+                                <p class="text-center mt-2">تطور عدد الطلاب</p>
+                                <div id="chart1"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- users online list (off canvas) -->
+
+
+
+    <div class="offcanvas offcanvas-end offcanvas-online" tabindex="-1" id="users-online" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين المتصلين</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/logo.jpg" alt="">
+                    <h4>مايا أحمد</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/avatar1.jpeg" alt="">
+                    <h4>سالم الاحمد </h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/avatar2.jpg" alt="">
+                    <h4>احمد محمد</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" height="50" src="assets/images/avatar3.avif" alt="">
+                    <h4>سارة مصطفى</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+            <div class="item-side-list d-flex mb-3">
+
+
+                <div class="avatar-info position-relative">
+
+                    <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+
+                    <img width="50" src="assets/images/avatar4.avif" alt="">
+                    <h4>مازن الزاهر</h4>
+                </div>
+                <div class="contact-icons">
+                    <a href=""><i class="fa-brands fa-square-whatsapp whatsapp-icon"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-messenger messenger-icon"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script>
+
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
